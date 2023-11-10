@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0fae5ad2878a253479ff001ba90a7fa9
+guid: 8f4b762368400654cb0ed3a1a267565e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,10 +45,10 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.044025153, y: 0.47379452}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 0, y: 0, z: 731, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard idle_0
+      name: June_walk_2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 80
-        height: 80
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9de721d015e08db439f59cfacc75a848
-      internalID: 475442727
+      spriteID: 4d5d0dedb0f3b90469580715aa075e7a
+      internalID: 1378449851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard idle_1
+      name: June_walk_2_1
       rect:
         serializedVersion: 2
-        x: 80
+        x: 32
         y: 0
-        width: 80
-        height: 80
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eef9cb5b1f032e94fb995e7e6a87409d
-      internalID: 2139208466
+      spriteID: a17a7af26ca78a94ca42c05eaf631d44
+      internalID: -821918990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard idle_2
+      name: June_walk_2_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b900130fd0eb50945bc6a9d7cffdcf8b
+      internalID: 1833591919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: June_walk_2_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c2da2feafa1ab4f9d3ea08c52f19d8
+      internalID: -566522153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: June_walk_2_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee8200de7e9f29449c42a50f2ce89a2
+      internalID: 532044941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: June_walk_2_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
-        width: 80
-        height: 80
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04105ba24f95fe547a3ad181c88e1334
-      internalID: 1042704043
+      spriteID: 8faec17cf4feacd4d8577ebde7b50dfa
+      internalID: 425119952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard idle_3
+      name: June_walk_2_6
       rect:
         serializedVersion: 2
-        x: 240
+        x: 192
         y: 0
-        width: 80
-        height: 80
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +245,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a12536fc505fcf849b776b001e7aee1b
-      internalID: -422946101
+      spriteID: ed6a5e8db86ed374ca3a82f4c2740cbf
+      internalID: -1043098067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard idle_4
+      name: June_walk_2_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201c5ff16c1a3374da7dcccecab2e8fa
+      internalID: 1096704673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: June_walk_2_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9383a0a0ff39540a521e91bfa7f6b1
+      internalID: 5106993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: June_walk_2_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb1e290d6eebab40b5542199e48bc0f
+      internalID: 347628753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: June_walk_2_10
       rect:
         serializedVersion: 2
         x: 320
         y: 0
-        width: 80
-        height: 80
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3db7e36692fe8642a6299f5b03283d5
-      internalID: 1824128768
+      spriteID: f26551d5dcebc864d8a9d54f26a8ec92
+      internalID: -154599683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard idle_5
+      name: June_walk_2_11
       rect:
         serializedVersion: 2
-        x: 400
+        x: 352
         y: 0
-        width: 80
-        height: 80
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +350,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bd84d37b0add5d4cb8b18ede5b88d9a
-      internalID: -1505184009
+      spriteID: c8c09c91fb7e345439c4398f0c028436
+      internalID: 1030128772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard idle_6
+      name: June_walk_2_12
       rect:
         serializedVersion: 2
-        x: 480
+        x: 384
         y: 0
-        width: 80
-        height: 80
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc7ec7bb01173e246b3aac22a22e9ceb
-      internalID: 1364411869
+      spriteID: 2760e934a4fa97f4e8ad353063d144be
+      internalID: 2017847168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard idle_7
+      name: June_walk_2_13
       rect:
         serializedVersion: 2
-        x: 560
+        x: 416
         y: 0
-        width: 80
-        height: 80
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,50 +392,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b115f1139616ad940a3b8fd4222534f8
-      internalID: 745222436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard idle_8
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74b88f68123ee804bb2c057f5c20c787
-      internalID: 654338288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard idle_9
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c53d5892f632f042b55f601d068ce21
-      internalID: 1592760001
+      spriteID: e8108e39d61ea28448ae969214145730
+      internalID: 1090306590
       vertices: []
       indices: 
       edges: []
@@ -318,23 +402,27 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wizard idle_0: 475442727
-      wizard idle_1: 2139208466
-      wizard idle_2: 1042704043
-      wizard idle_3: -422946101
-      wizard idle_4: 1824128768
-      wizard idle_5: -1505184009
-      wizard idle_6: 1364411869
-      wizard idle_7: 745222436
-      wizard idle_8: 654338288
-      wizard idle_9: 1592760001
+      June_walk_2_0: 1378449851
+      June_walk_2_1: -821918990
+      June_walk_2_10: -154599683
+      June_walk_2_11: 1030128772
+      June_walk_2_12: 2017847168
+      June_walk_2_13: 1090306590
+      June_walk_2_2: 1833591919
+      June_walk_2_3: -566522153
+      June_walk_2_4: 532044941
+      June_walk_2_5: 425119952
+      June_walk_2_6: -1043098067
+      June_walk_2_7: 1096704673
+      June_walk_2_8: 5106993
+      June_walk_2_9: 347628753
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

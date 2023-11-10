@@ -4,35 +4,45 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    Rigidbody2D body;
-
-    float horizontalMove;
-    float verticalMove;
-    float diagonalMoveLimiter = 0.7f;
+    private Rigidbody2D rb;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     public float walkSpeed = 20.0f;
+    private const float DiagonalMoveLimiter = 0.7f;
 
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
-    }
-
-    void Update()
-    {
-        // Gives a value between -1 and 1
-        horizontalMove = Input.GetAxisRaw("Horizontal"); // -1 is left
-        verticalMove = Input.GetAxisRaw("Vertical"); // -1 is down
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
     {
-        if (horizontalMove != 0 && verticalMove != 0) // Check for diagonal movement
+        float horizontalMove = Input.GetAxisRaw("Horizontal");
+        float verticalMove = Input.GetAxisRaw("Vertical");
+
+
+        if (horizontalMove != 0 && verticalMove != 0)
         {
-            // limit movement speed diagonally, so you move at 70% speed
-            horizontalMove *= diagonalMoveLimiter;
-            verticalMove *= diagonalMoveLimiter;
+            horizontalMove *= DiagonalMoveLimiter;
+            verticalMove *= DiagonalMoveLimiter;
         }
 
-        body.velocity = new Vector2(horizontalMove * walkSpeed, verticalMove * walkSpeed);
+        rb.velocity = new Vector2(horizontalMove * walkSpeed, verticalMove * walkSpeed);
+
+        UpdateAnimationState(horizontalMove, verticalMove);
+    }
+
+    private void UpdateAnimationState(float horizontalMove, float verticalMove)
+    {
+        bool isWalking = horizontalMove != 0 || verticalMove != 0;
+        animator.SetBool("walking", isWalking);
+
+        if (isWalking)
+        {
+            spriteRenderer.flipX = horizontalMove < 0;
+        }
     }
 }
