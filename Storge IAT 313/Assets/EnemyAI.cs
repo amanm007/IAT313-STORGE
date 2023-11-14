@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     private AIPath aiPath;
     private AIDestinationSetter destinationSetter;
     private Patrol patrolScript;
+    private SpriteRenderer sp;
     private enum State { Patrolling, Chasing, RandomMoving }
     private State currentState;
 
@@ -21,6 +22,7 @@ public class EnemyAI : MonoBehaviour
         aiPath = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
         patrolScript = GetComponent<Patrol>();
+        sp = GetComponent<SpriteRenderer>();
 
         // Set the initial state to patrolling
         SetState(State.Patrolling);
@@ -53,6 +55,16 @@ public class EnemyAI : MonoBehaviour
             case State.RandomMoving:
                 // Implement random movement logic here
                 break;
+        }
+        if (aiPath.velocity.x > 0.01f)
+        {
+            // If your sprite faces left by default, set this to true
+            sp.flipX = true;
+        }
+        else if (aiPath.velocity.x < -0.01f)
+        {
+            // If your sprite faces left by default, set this to false
+            sp.flipX = false;
         }
     }
 
