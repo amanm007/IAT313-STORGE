@@ -30,30 +30,40 @@ namespace Pathfinding {
 		protected override void Awake () {
 			base.Awake();
 			agent = GetComponent<IAstarAI>();
-		}
+        }
 
-		/// <summary>Update is called once per frame</summary>
-		void Update () {
-			if (targets.Length == 0) return;
+        /// <summary>Update is called once per frame</summary>
+        void Update()
+        {
+            if (targets.Length == 0) return;
 
-			bool search = false;
+            bool search = false;
 
-			// Note: using reachedEndOfPath and pathPending instead of reachedDestination here because
-			// if the destination cannot be reached by the agent, we don't want it to get stuck, we just want it to get as close as possible and then move on.
-			if (agent.reachedEndOfPath && !agent.pathPending && float.IsPositiveInfinity(switchTime)) {
-				switchTime = Time.time + delay;
-			}
+            // Note: using reachedEndOfPath and pathPending instead of reachedDestination here because
+            // if the destination cannot be reached by the agent, we don't want it to get stuck, we just want it to get as close as possible and then move on.
+            if (agent.reachedEndOfPath && !agent.pathPending && float.IsPositiveInfinity(switchTime))
+            {
+                switchTime = Time.time + delay;
+            }
 
-			if (Time.time >= switchTime) {
-				index = index + 1;
-				search = true;
-				switchTime = float.PositiveInfinity;
-			}
+            if (Time.time >= switchTime)
+            {
+                index = index + 1;
+                search = true;
+                switchTime = float.PositiveInfinity;
+            }
 
-			index = index % targets.Length;
-			agent.destination = targets[index].position;
+            index = index % targets.Length;
+            agent.destination = targets[index].position;
 
-			if (search) agent.SearchPath();
-		}
-	}
+            if (search) agent.SearchPath();
+        }
+        public void UpdateTargets(Transform[] newTargets)
+        {
+            targets = newTargets;
+            index = 0; // Reset index to start patrolling from the first new target
+            switchTime = float.PositiveInfinity; // Reset switch time
+        }
+
+    }
 }

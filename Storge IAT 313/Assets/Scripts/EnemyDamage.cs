@@ -5,16 +5,63 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     public int BeastDamage = 2;
+    public int Pool_TendrilDamage = 1;
+    private Coroutine damageCoroutine;
+    public PlayerHealth playerHealth;
+
+
+    private void Start()
+    {
+        playerHealth = GetComponent<PlayerHealth>();
+
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+             playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(BeastDamage);
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (damageCoroutine == null)
+            {
+                damageCoroutine = StartCoroutine(ApplyPoolDamage(collision.gameObject));
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (damageCoroutine != null)
+            {
+                StopCoroutine(damageCoroutine);
+                damageCoroutine = null;
+            }
+        }
+    }
+
+    private IEnumerator ApplyPoolDamage(GameObject player)
+    {
+        while (true)
+        {
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(Pool_TendrilDamage);
+            }
+            yield return new WaitForSeconds(2f); // Wait for 2 seconds before applying damage again
         }
     }
 }
