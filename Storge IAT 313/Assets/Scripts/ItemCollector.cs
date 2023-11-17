@@ -22,7 +22,7 @@ public class ItemCollector : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Sword"))
+        if (collision.gameObject.CompareTag("Gramophone"))
         {
             if (!collectSound.isPlaying)
             {
